@@ -1,0 +1,15 @@
+<h1> Your Artists </h1>
+
+<ol>
+	<% @artists.each do |artist| %>
+		<h3><li><%= link_to artist.name, artist_path(artist) %> - <%= pluralize(artist.songs.length, "song") %></h3></li>
+		<% if artist.songs %>
+			<h3>Songs:</h3>
+			<ul>
+			<% artist.songs.each do |song| %>
+				<p><li><%= song.title %></li></p>
+			<% end %>
+			</ul>
+		<% end %>
+	<% end %>
+</ol>
