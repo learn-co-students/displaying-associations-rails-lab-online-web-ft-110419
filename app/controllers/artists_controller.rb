@@ -2,6 +2,7 @@ class ArtistsController < ApplicationController
   before_action :finds_artist, only: [:update, :edit, :destroy, :show]
 
   def index
+    # Helper method for fun 
     @artists = get_model_name_find_all
   end
 

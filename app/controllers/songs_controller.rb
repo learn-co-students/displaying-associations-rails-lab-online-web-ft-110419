@@ -2,6 +2,7 @@ class SongsController < ApplicationController
   before_action :finds_song, only: [:update, :edit, :destroy, :show]
 
   def index
+    # Helper method for fun 
     @songs = get_model_name_find_all
   end
 
